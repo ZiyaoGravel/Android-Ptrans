@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:screenOrientation="landscape"
+    tools:context="com.android.example.diconexcalorimeterforwaterloads.MainActivity"
+    android:weightSum="1"
+    android:id="@+id/beta2">
+    <!--setting globale-->
+
+    <TextView
+        android:text="Power"
+        android:layout_marginBottom="10dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/powertext"
+        android:textSize="20dp"/>
+
+    <!--the fonction of power box-->
+    <LinearLayout
+        android:id="@+id/powerall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/powertext">
+        <!-- the blue part, affiching for the data -->
+        <LinearLayout
+            android:id="@+id/power1"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/powertext"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="#672863c0">
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:id="@+id/powerbox"
+                android:background="@color/boxblue">
+                <!-- make sure the data in the middle of the box -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/powerdata"
+                    android:textColor="@color/datacolor"
+                    android:text="--"
+                    android:textSize="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:src="#353535"
+            android:background="@color/black">
+            <!-- the balck part, it's for the unit -->
+            <RelativeLayout
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity" >
+
+                <TextView
+                    android:text="KW"
+                    android:textColor="@color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText"
+                    android:textSize="50dp"
+                    android:gravity="center"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/powerall"
+        android:layout_alignRight="@+id/powerall"
+        android:layout_alignEnd="@+id/powerall"
+        android:layout_above="@+id/textView3" />
+
+    <!-- information -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="TEL: +33(0) "
+        android:id="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1 34 16 33 00"
+        android:id="@+id/textView4"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="12 Ave. des Oures   "
+        android:id="@+id/textView5"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="95580 Andily France"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/logo"
+        android:layout_alignEnd="@+id/logo" />
+
+
+    <!-- help button -->
+    <ImageButton
+        android:id="@+id/btn_test_popupwindow"
+        android:src="@drawable/pignon"
+        android:background="@color/white"
+        android:text="Help"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/powerall"
+        android:layout_alignRight="@+id/logo"
+        android:layout_alignEnd="@+id/logo" />
+
+    <!-- the boxes about FLOW, HOT T, COLD T, and DELTA T -->
+    <LinearLayout
+        android:id="@+id/scrollall"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/powertext"
+        android:layout_toRightOf="@+id/powerall"
+        android:layout_marginLeft="67dp"
+        android:layout_marginStart="67dp">
+
+        <!-- FLOW -->
+        <LinearLayout
+            android:layout_width="470dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="Flow"
+                android:layout_marginBottom="10dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/flowtext"
+                android:textSize="20dp"></TextView>
+            <!-- the blue part, affiching for the data -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flowall">
+                <LinearLayout
+                    android:id="@+id/flow1"
+                    android:layout_width="370dp"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/flowtext"
+                    android:layout_alignLeft="@+id/flowtext"
+                    android:layout_alignStart="@+id/flowtext"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="370dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/flowbox"
+                        android:background="@color/boxblue">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/flowdata"
+                            android:text="--"
+                            android:textSize="90dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- the balck part, it's for the unit -->
+                <LinearLayout
+                    android:layout_alignTop="@+id/flow1"
+                    android:topLeftRadius="10px"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:src="#353535"
+                    android:background="@color/black"
+
+                    android:layout_alignBottom="@+id/flow1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="m3/h"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/unitkw1"
+                        android:textSize="36dp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+                <!-- Hot Temperature    -->
+            </LinearLayout>
+            <TextView
+                android:text="Hot Temperature"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hottemptext"
+                android:textSize="20dp"></TextView>
+            <!-- the blue part, affiching for the data -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hotall">
+                <LinearLayout
+                    android:id="@+id/hot1"
+                    android:layout_width="370dp"
+                    android:layout_height="120dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="370dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/hotbox"
+                        android:background="@color/boxblue">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hotdata"
+                            android:textColor="@color/datacolor"
+                            android:text="--"
+                            android:textSize="90dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- the balck part, it's for the unit -->
+                <LinearLayout
+
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:src="#353535"
+                    android:background="@color/black"
+
+
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="℃"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/unittemp1"
+                        android:textSize="36dp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+                <!-- Cold Temperature            -->
+            </LinearLayout>
+            <TextView
+                android:text="Cold Temperature"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coldtemptext"
+                android:textSize="20dp"></TextView>
+            <!-- the blue part, affiching for the data -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/coldall">
+                <LinearLayout
+                    android:id="@+id/cold1"
+                    android:layout_width="370dp"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/flowtext"
+                    android:layout_alignLeft="@+id/flowtext"
+                    android:layout_alignStart="@+id/flowtext"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="390dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/coldbox"
+                        android:background="@color/boxblue">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/colddata"
+                            android:textColor="@color/datacolor"
+                            android:text="--"
+                            android:textSize="90dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- the balck part, it's for the unit -->
+                <LinearLayout
+                    android:layout_alignTop="@+id/flow1"
+                    android:topLeftRadius="10px"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:src="#353535"
+                    android:background="@color/black"
+
+                    android:layout_alignBottom="@+id/flow1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="℃"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/unittemp2"
+                        android:textSize="36dp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+                <!-- Delta Temperature             -->
+            </LinearLayout>
+
+            <TextView
+                android:text="Delta Temperature"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deltatemptext"
+                android:textSize="20dp"></TextView>
+
+            <!-- the blue part, affiching for the data -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deltaall">
+                <LinearLayout
+                    android:id="@+id/delta1"
+                    android:layout_width="370dp"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/flowtext"
+                    android:layout_alignLeft="@+id/flowtext"
+                    android:layout_alignStart="@+id/flowtext"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="390dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/deltabox"
+                        android:background="@color/boxblue">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/deltadata"
+                            android:textColor="@color/datacolor"
+                            android:text="--"
+                            android:textSize="90dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- the balck part, it's for the unit -->
+                <LinearLayout
+                    android:layout_alignTop="@+id/flow1"
+                    android:topLeftRadius="10px"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:src="#353535"
+                    android:background="@color/black"
+
+                    android:layout_alignBottom="@+id/flow1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="℃"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/unittemp3"
+                        android:textSize="36dp"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:background">#565656</item>-->
+        <item name="android:windowTitleSize">50dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/Theme.AppCompat.Light.DarkActionBar</item>
+    </style>
+    <style name="blackTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">#DDDDDD</item>
+        <item name="android:windowTitleSize">50dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/Theme.AppCompat.Light.DarkActionBar</item>
+    </style>
+
+    <!--<Shape >-->
+        <!--<solid android:color="#FFFFFF" />-->
+        <!--<corners android:topLeftRadius="10dp"-->
+            <!--android:topRightRadius="10dp"-->
+            <!--android:bottomRightRadius="10dp"-->
+            <!--android:bottomLeftRadius="10dp"/>-->
+    <!--</Shape>-->
+
+
+
+</resources>

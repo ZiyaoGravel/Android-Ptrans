@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/demoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Searching for calorimeter..."
+        android:textSize="44sp"
+        android:textStyle="bold" />
+    
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/demoTitle"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:indeterminate="true" />
+    
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+
+    <ViewFlipper android:id="@+id/flipper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:flipInterval="900" >
+        <TextView
+            android:id="@+id/centralText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="250dp"
+            android:text="Please plug the USB cable linked to the water load"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+    </ViewFlipper>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DICONEX CALORIMETER FOR WATER LOADS</string>
+
+    <string name="help1">This Graphical User Interface will display different data from the calorimeter: the power dissipated by the Joule effect, the flow and different temperatures measured by the calorimeter (hot temperature, cold temperature and between both).</string>
+    <string name="help2">The power is counted in kW (tens +units + 2 decimals)</string>
+    <string name="help3">The flow rate is counted in m3 / hour (units + 2 decimals)</string>
+    <string name="help4">The temperatures is counted in ° C (tens + units + 1 decimal)</string>
+</resources>
